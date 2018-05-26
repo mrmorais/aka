@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/mrmorais/aka/issues"
   },
-  "homepage": "https://github.com/mrmorais/aka#readme"
+  "homepage": "https://github.com/mrmorais/aka#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0"
+  }
 }
