@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = {
-    entry: 'src/index.js',
+    target: 'node',
+    devtool: 'source-map',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'aka-server.js',
@@ -10,5 +12,8 @@ module.exports = {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
         ]
+    },
+    resolve: {
+        extensions: ['.js']
     }
 };

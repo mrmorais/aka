@@ -4,7 +4,9 @@
   "description": "A simple open-source URL shortener",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js",
+    "start": "babel-node src/index.js",
+    "serve": "ENV=prod node dist/aka-server.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,18 @@
   },
   "homepage": "https://github.com/mrmorais/aka#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "sqlite": "^2.9.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
   }
 }
